@@ -1,0 +1,43 @@
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.5rem; /* Adjust font size as needed */
+  /* font-weight: bold; */
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+}
+
+.typing-effect .text::after {
+  content: 'Hey, I am Pratik';
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 0;
+  animation: typing 6s steps(40, end) infinite;
+}
+
+.typing-effect .cursor {
+  display: inline-block;
+  width: 2px;
+  height: 2.75rem; /* Adjust to match text size */
+  background-color: black;
+  animation: blinking-cursor 1s step-end infinite;
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    width: 0;
+  }
+  25%,
+  75% {
+    width: 100%;
+  }
+}
+
+@keyframes blinking-cursor {
+  50% {
+    background-color: transparent;
+  }
+}
